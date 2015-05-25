@@ -1,0 +1,14 @@
+{
+  "name": "Hinario Eav",
+  "version": "1.0.0",
+  "description": "hinario eac",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.3.15",
+    "materialize": "~0.96.1",
+    "animate.css": "~3.2.6"
+  }
+}

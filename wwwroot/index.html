@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="hinario">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hinario EAV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="assets/css/styles.min.css"/>
+    <link rel="stylesheet" href="assets/css/styles-app.css"/>
+</head>
+<body ng-controller="Home">
+<!-- Barra fixa no topo -->
+<img ng-show="carregando" src='images/carregando.gif' style="width:200px;200px" class="center-block" alt=""/>   
+<div ng-hide="carregando">
+
+<div ng-include="'components/shared/navbar/navbar.view.html'"></div>
+<div ng-show="pesquisando" class="bounceInDown" ng-include="'components/shared/search/keyboard-hymns.html'"></div>
+<div ng-hide="pesquisando" class="bounceInDown" ng-include="'components/shared/data/hymn-data.html'"></div>
+</div>
+<script src="assets/js/scripts.min.js"></script>
+<script src="assets/js/hinario.controllers.js"></script>
+
+</body>
+</html>
