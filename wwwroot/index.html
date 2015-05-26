@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="assets/css/styles-app.css"/>
 </head>
 <body ng-controller="Home">
+<div ng-include="'components/shared/navbar/navbar.view.html'"></div>
 <!-- Barra fixa no topo -->
 <img ng-show="carregando" src='images/carregando.gif' style="width:200px;200px" class="center-block" alt=""/>   
 <div ng-hide="carregando">
-
-<div ng-include="'components/shared/navbar/navbar.view.html'"></div>
 <div ng-show="pesquisando" class="bounceInDown" ng-include="'components/shared/search/keyboard-hymns.html'"></div>
 <div ng-hide="pesquisando" class="bounceInDown" ng-include="'components/shared/data/hymn-data.html'"></div>
 </div>
