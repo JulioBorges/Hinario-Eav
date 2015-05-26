@@ -51,20 +51,20 @@ angular.module('hinario').controller('Home', function ($scope, $sce, $http) {
 
     $scope.Pesquisar = function () {
         $scope.carregando = true;
-        setTimeout(function () {
-            $scope.hinos = SearchJson($scope.hinos_origem, 'number', $scope.hino_selecionado);
-            if ($scope.hinos.length == 0) {
-                $scope.carregando = false;
-                $scope.$digest();
-                Materialize.toast('Nenhum hino encontrado', 3000);
-            }
-            else {
-                $scope.pesquisando = false;
-                $scope.exibindo = true;
-                $scope.carregando = false;
-                $scope.$digest();
-            }
-        }, 2000);
+        /*setTimeout(function () {*/
+        $scope.hinos = SearchJson($scope.hinos_origem, 'number', $scope.hino_selecionado);
+        if ($scope.hinos.length == 0) {
+            $scope.carregando = false;
+            $scope.$digest();
+            Materialize.toast('Nenhum hino encontrado', 3000);
+        }
+        else {
+            $scope.pesquisando = false;
+            $scope.exibindo = true;
+            $scope.carregando = false;
+            $scope.$digest();
+        }
+        /*}, 2000);*/
     };
 
     $scope.HabilitaPesquisa = function () {
@@ -81,11 +81,11 @@ angular.module('hinario').controller('Home', function ($scope, $sce, $http) {
             .success(function (data) {
                 $scope.carregando = true;
                 // Mockando
-                setTimeout(function () {
-                    $scope.hinos_origem = angular.fromJson(data);
-                    $scope.carregando = false;
-                    $scope.$digest();
-                }, 1500);
+                /*setTimeout(function () {*/
+                $scope.hinos_origem = angular.fromJson(data);
+                $scope.carregando = false;
+                $scope.$digest();
+                /*}, 1500);*/
             }).catch(function () {
                 $scope.carregando = false;
                 Materialize.toast('Falha ao recuperar os dados', 3000);
