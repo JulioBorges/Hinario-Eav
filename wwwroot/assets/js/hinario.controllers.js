@@ -15,6 +15,7 @@ angular.module('hinario').controller('Home', function ($scope, $sce, $http) {
 
         if ($scope.hino_selecionado.length == 0) {
             $scope.hino_selecionado = valor.toString();
+            $scope.$digest();
             return;
         }
 
@@ -26,6 +27,7 @@ angular.module('hinario').controller('Home', function ($scope, $sce, $http) {
         if ($scope.hino_selecionado.length < tamanho_maximo) {
             $scope.hino_selecionado = $scope.hino_selecionado + '' + valor;
         }
+        $scope.$digest();
     };
 
     $scope.SelecionaHino = function (tipoHino) {
