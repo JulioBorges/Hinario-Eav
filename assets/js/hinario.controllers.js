@@ -55,14 +55,12 @@ angular.module('hinario').controller('Home', function ($scope, $sce, $http) {
         $scope.hinos = SearchJson($scope.hinos_origem, 'number', $scope.hino_selecionado);
         if ($scope.hinos.length == 0) {
             $scope.carregando = false;
-            $scope.$digest();
             Materialize.toast('Nenhum hino encontrado', 3000);
         }
         else {
             $scope.pesquisando = false;
             $scope.exibindo = true;
             $scope.carregando = false;
-            $scope.$digest();
         }
         /*}, 2000);*/
     };
@@ -84,7 +82,7 @@ angular.module('hinario').controller('Home', function ($scope, $sce, $http) {
                 /*setTimeout(function () {*/
                 $scope.hinos_origem = angular.fromJson(data);
                 $scope.carregando = false;
-                $scope.$digest();
+                //$scope.$digest();
                 /*}, 1500);*/
             }).catch(function () {
                 $scope.carregando = false;
