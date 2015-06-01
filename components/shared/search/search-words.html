@@ -1,14 +1,26 @@
 <br/>
 <div class="row">
-    <div class="col s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <div class="input-field col s6">
-        <label for="input-pesquisa-palavra">Palavra</label>
-        <input id="input-pesquisa-palavra" type="text" class="input-field"
-               ng-model="$parent.pesquisa_palavra"/>
+    <div class="row">
+        <div class="col s3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="input-field col s6">
+            <label for="input-pesquisa-palavra">Palavra</label>
+            <input id="input-pesquisa-palavra" type="text" class="input-field"
+                   ng-model="$parent.pesquisa_palavra"/>
+        </div>
+        <div class="col s3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
     </div>
-    <div class="col s4">
-        <a class="waves-effect waves-light btn" style="margin-top:10px">
-            <i class="mdi-action-search center"></i>
-        </a>
+    <div class="row center-align">
+        <button class="btn-large orange" ng-click="Limpar()">Limpar</button>
+        <button class="btn-floating center-align" style="margin-left: 6px;" ng-click="PesquisaTexto()"><i
+                class="mdi-action-search"></i></button>
+    </div>
+</div>
+<div class="row" ng-show="$parent.exibindo_lista">
+    <br/>
+    <h5 class="center-align">Hinos encontrados</h5>
+    <div ng-repeat="hinoTempo in $parent.hinos">
+        <div class="row center-align" style="margin:5px">
+            <a class="btn-large" ng-click="ExibeHino(hinoTempo.number)">{{ hinoTempo.name }}</a>
+        </div>
     </div>
 </div>

@@ -2,9 +2,8 @@
     <nav>
         <div class="nav-wrapper blue">
             <a href="#" class="brand-logo">Hinario</a>
-
             <ul class="right">
-                <li ng-hide="pesquisando"><a href="" ng-click="HabilitaPesquisa()"><i class="mdi-action-search"></i></a></li>
+                <li><a href="" ng-click="AlteraPesquisa()"><i class="mdi-action-search right"></i><span class="hide-on-med-and-down">{{ TipoPesquisa() }}</span></a></li>
             </ul>
         </div>
     </nav>

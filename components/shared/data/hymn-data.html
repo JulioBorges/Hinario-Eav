@@ -1,6 +1,6 @@
-<li ng-repeat="hinoTempo in $parent.hinos">
+<div ng-repeat="hinoTempo in $parent.hinos">
     <div class="row center-align" style="margin:5px">
         <a class="btn-large">{{ hinoTempo.name }}</a>
         <p ng-bind-html="FormatHtml(hinoTempo.hino)"></p>
     </div>
-</li>
+</div>
