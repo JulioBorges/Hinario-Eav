@@ -20,7 +20,7 @@
     
     <gap:platform name="android" />
     <gap:platform name="winphone" />
-    <gap:splash src="splash.png" />
+    <gap:splash src="splash.jpg" />
     <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
     <icon src="icon.png" gap:platform="android" gap:density="mdpi" />
     <icon src="icon.png" gap:platform="android" gap:density="hdpi" />
